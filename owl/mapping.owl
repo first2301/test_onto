@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://pcnrnd.org/mapping.owl"
+         xmlns="http://pcnrnd.org/mapping.owl#">
+
+<owl:Ontology rdf:about="http://pcnrnd.org/mapping.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_machine">
+  <rdfs:domain rdf:resource="#Industry"/>
+  <rdfs:range rdf:resource="#Machine"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_data">
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="#Data"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_ml_model">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#MLModel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_ml_metric_data">
+  <rdfs:domain rdf:resource="#MLModel"/>
+  <rdfs:range rdf:resource="#MLMetricData"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Industry">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Machine">
+  <rdfs:subClassOf rdf:resource="#Industry"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Data">
+  <rdfs:subClassOf rdf:resource="#Machine"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MLModel">
+  <rdfs:subClassOf rdf:resource="#Machine"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MLMetricData">
+  <rdfs:subClassOf rdf:resource="#Data"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#manufacturing">
+  <rdf:type rdf:resource="#Industry"/>
+  <has_machine rdf:resource="#molten_aluminum_machine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine">
+  <rdf:type rdf:resource="#Machine"/>
+  <has_data rdf:resource="#molten_aluminum_machine_data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_data">
+  <rdf:type rdf:resource="#Data"/>
+  <has_ml_model rdf:resource="#molten_aluminum_machine_ml_model"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_ml_model">
+  <rdf:type rdf:resource="#MLModel"/>
+  <has_ml_metric_data rdf:resource="#molten_aluminum_machine_ml_metric_data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_ml_metric_data">
+  <rdf:type rdf:resource="#MLMetricData"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

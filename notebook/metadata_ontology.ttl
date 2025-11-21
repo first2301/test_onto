@@ -1,0 +1,4 @@
+@prefix fact: <http://factory.org/> .
+
+fact:molten_aluminum fact:isDataOf fact:Melting_Machine .
+

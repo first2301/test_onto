@@ -1,0 +1,16 @@
+chromadb
+fastapi
+ipykernel
+openpyxl
+owlready2
+pandas
+polars
+pyarrow
+pydantic
+pydantic-settings
+pytest
+rdflib
+requests
+sentence-transformers
+streamlit
+uvicorn[standard]

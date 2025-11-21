@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://pcnrnd.org/mapping.owl"
+         xmlns="http://pcnrnd.org/mapping.owl#">
+
+<owl:Ontology rdf:about="http://pcnrnd.org/mapping.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_machine">
+  <rdfs:domain rdf:resource="#Industry"/>
+  <rdfs:range rdf:resource="#Machine"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_data">
+  <rdfs:domain rdf:resource="#Machine"/>
+  <rdfs:range rdf:resource="#Data"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_ml_model">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#MLModel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_ml_metric_data">
+  <rdfs:domain rdf:resource="#MLModel"/>
+  <rdfs:range rdf:resource="#MLMetricData"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Industry">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Machine">
+  <rdfs:subClassOf rdf:resource="#Industry"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Data">
+  <rdfs:subClassOf rdf:resource="#Machine"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MLModel">
+  <rdfs:subClassOf rdf:resource="#Machine"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MLMetricData">
+  <rdfs:subClassOf rdf:resource="#Data"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#manufacturing">
+  <rdf:type rdf:resource="#Industry"/>
+  <has_machine rdf:resource="#molten_aluminum_machine"/>
+  <has_machine rdf:resource="#deoksan_machine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine">
+  <rdf:type rdf:resource="#Machine"/>
+  <has_data rdf:resource="#molten_aluminum_machine_data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_data">
+  <rdf:type rdf:resource="#Data"/>
+  <has_ml_model rdf:resource="#molten_aluminum_machine_ml_model"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_ml_model">
+  <rdf:type rdf:resource="#MLModel"/>
+  <has_ml_metric_data rdf:resource="#molten_aluminum_machine_ml_metric_data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#molten_aluminum_machine_ml_metric_data">
+  <rdf:type rdf:resource="#MLMetricData"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine">
+  <rdf:type rdf:resource="#Machine"/>
+  <has_data rdf:resource="#deoksan_machine_data_0"/>
+  <has_data rdf:resource="#deoksan_machine_data_1"/>
+  <has_data rdf:resource="#deoksan_machine_data_2"/>
+  <has_data rdf:resource="#deoksan_machine_data_3"/>
+  <has_data rdf:resource="#deoksan_machine_data_4"/>
+  <has_data rdf:resource="#deoksan_machine_data_5"/>
+  <has_data rdf:resource="#deoksan_machine_data_6"/>
+  <has_data rdf:resource="#deoksan_machine_data_7"/>
+  <has_data rdf:resource="#deoksan_machine_data_8"/>
+  <has_data rdf:resource="#deoksan_machine_data_9"/>
+  <has_data rdf:resource="#deoksan_machine_data_10"/>
+  <has_data rdf:resource="#deoksan_machine_data_11"/>
+  <has_data rdf:resource="#deoksan_machine_data_12"/>
+  <has_data rdf:resource="#deoksan_machine_data_13"/>
+  <has_data rdf:resource="#deoksan_machine_data_14"/>
+  <has_data rdf:resource="#deoksan_machine_data_15"/>
+  <has_data rdf:resource="#deoksan_machine_data_16"/>
+  <has_data rdf:resource="#deoksan_machine_data_17"/>
+  <has_data rdf:resource="#deoksan_machine_data_18"/>
+  <has_data rdf:resource="#deoksan_machine_data_19"/>
+  <has_data rdf:resource="#deoksan_machine_data_20"/>
+  <has_data rdf:resource="#deoksan_machine_data_21"/>
+  <has_data rdf:resource="#deoksan_machine_data_22"/>
+  <has_data rdf:resource="#deoksan_machine_data_23"/>
+  <has_data rdf:resource="#deoksan_machine_data_24"/>
+  <has_data rdf:resource="#deoksan_machine_data_25"/>
+  <has_data rdf:resource="#deoksan_machine_data_26"/>
+  <has_data rdf:resource="#deoksan_machine_data_27"/>
+  <has_data rdf:resource="#deoksan_machine_data_28"/>
+  <has_data rdf:resource="#deoksan_machine_data_29"/>
+  <has_data rdf:resource="#deoksan_machine_data_30"/>
+  <has_data rdf:resource="#deoksan_machine_data_31"/>
+  <has_data rdf:resource="#deoksan_machine_data_32"/>
+  <has_data rdf:resource="#deoksan_machine_data_33"/>
+  <has_data rdf:resource="#deoksan_machine_data_34"/>
+  <has_data rdf:resource="#deoksan_machine_data_35"/>
+  <has_data rdf:resource="#deoksan_machine_data_36"/>
+  <has_data rdf:resource="#deoksan_machine_data_37"/>
+  <has_data rdf:resource="#deoksan_machine_data_38"/>
+  <has_data rdf:resource="#deoksan_machine_data_39"/>
+  <has_data rdf:resource="#deoksan_machine_data_40"/>
+  <has_data rdf:resource="#deoksan_machine_data_41"/>
+  <has_data rdf:resource="#deoksan_machine_data_42"/>
+  <has_data rdf:resource="#deoksan_machine_data_43"/>
+  <has_data rdf:resource="#deoksan_machine_data_44"/>
+  <has_data rdf:resource="#deoksan_machine_data_45"/>
+  <has_data rdf:resource="#deoksan_machine_data_46"/>
+  <has_data rdf:resource="#deoksan_machine_data_47"/>
+  <has_data rdf:resource="#deoksan_machine_data_48"/>
+  <has_data rdf:resource="#deoksan_machine_data_49"/>
+  <has_data rdf:resource="#deoksan_machine_data_50"/>
+  <has_data rdf:resource="#deoksan_machine_data_51"/>
+  <has_data rdf:resource="#deoksan_machine_data_52"/>
+  <has_data rdf:resource="#deoksan_machine_data_53"/>
+  <has_data rdf:resource="#deoksan_machine_data_54"/>
+  <has_data rdf:resource="#deoksan_machine_data_55"/>
+  <has_data rdf:resource="#deoksan_machine_data_56"/>
+  <has_data rdf:resource="#deoksan_machine_data_57"/>
+  <has_data rdf:resource="#deoksan_machine_data_58"/>
+  <has_data rdf:resource="#deoksan_machine_data_59"/>
+  <has_data rdf:resource="#deoksan_machine_data_60"/>
+  <has_data rdf:resource="#deoksan_machine_data_61"/>
+  <has_data rdf:resource="#deoksan_machine_data_62"/>
+  <has_data rdf:resource="#deoksan_machine_data_63"/>
+  <has_data rdf:resource="#deoksan_machine_data_64"/>
+  <has_data rdf:resource="#deoksan_machine_data_65"/>
+  <has_data rdf:resource="#deoksan_machine_data_66"/>
+  <has_data rdf:resource="#deoksan_machine_data_67"/>
+  <has_data rdf:resource="#deoksan_machine_data_68"/>
+  <has_data rdf:resource="#deoksan_machine_data_69"/>
+  <has_data rdf:resource="#deoksan_machine_data_70"/>
+  <has_data rdf:resource="#deoksan_machine_data_71"/>
+  <has_data rdf:resource="#deoksan_machine_data_72"/>
+  <has_data rdf:resource="#deoksan_machine_data_73"/>
+  <has_data rdf:resource="#deoksan_machine_data_74"/>
+  <has_data rdf:resource="#deoksan_machine_data_75"/>
+  <has_data rdf:resource="#deoksan_machine_data_76"/>
+  <has_data rdf:resource="#deoksan_machine_data_77"/>
+  <has_data rdf:resource="#deoksan_machine_data_78"/>
+  <has_data rdf:resource="#deoksan_machine_data_79"/>
+  <has_data rdf:resource="#deoksan_machine_data_80"/>
+  <has_data rdf:resource="#deoksan_machine_data_81"/>
+  <has_data rdf:resource="#deoksan_machine_data_82"/>
+  <has_data rdf:resource="#deoksan_machine_data_83"/>
+  <has_data rdf:resource="#deoksan_machine_data_84"/>
+  <has_data rdf:resource="#deoksan_machine_data_85"/>
+  <has_data rdf:resource="#deoksan_machine_data_86"/>
+  <has_data rdf:resource="#deoksan_machine_data_87"/>
+  <has_data rdf:resource="#deoksan_machine_data_88"/>
+  <has_data rdf:resource="#deoksan_machine_data_89"/>
+  <has_data rdf:resource="#deoksan_machine_data_90"/>
+  <has_data rdf:resource="#deoksan_machine_data_91"/>
+  <has_data rdf:resource="#deoksan_machine_data_92"/>
+  <has_data rdf:resource="#deoksan_machine_data_93"/>
+  <has_data rdf:resource="#deoksan_machine_data_94"/>
+  <has_data rdf:resource="#deoksan_machine_data_95"/>
+  <has_data rdf:resource="#deoksan_machine_data_96"/>
+  <has_data rdf:resource="#deoksan_machine_data_97"/>
+  <has_data rdf:resource="#deoksan_machine_data_98"/>
+  <has_data rdf:resource="#deoksan_machine_data_99"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_0">
+  <rdf:type rdf:resource="#Data"/>
+  <has_ml_model rdf:resource="#deoksan_machine_ml_model"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_1">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_2">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_3">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_4">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_5">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_6">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_7">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_8">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_9">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_10">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_11">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_12">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_13">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_14">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_15">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_16">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_17">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_18">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_19">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_20">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_21">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_22">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_23">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_24">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_25">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_26">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_27">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_28">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_29">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_30">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_31">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_32">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_33">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_34">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_35">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_36">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_37">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_38">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_39">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_40">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_41">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_42">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_43">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_44">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_45">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_46">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_47">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_48">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_49">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_50">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_51">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_52">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_53">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_54">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_55">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_56">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_57">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_58">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_59">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_60">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_61">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_62">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_63">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_64">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_65">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_66">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_67">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_68">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_69">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_70">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_71">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_72">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_73">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_74">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_75">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_76">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_77">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_78">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_79">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_80">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_81">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_82">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_83">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_84">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_85">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_86">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_87">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_88">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_89">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_90">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_91">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_92">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_93">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_94">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_95">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_96">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_97">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_98">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_data_99">
+  <rdf:type rdf:resource="#Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_ml_model">
+  <rdf:type rdf:resource="#MLModel"/>
+  <has_ml_metric_data rdf:resource="#deoksan_machine_ml_metric_data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deoksan_machine_ml_metric_data">
+  <rdf:type rdf:resource="#MLMetricData"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
