@@ -1,0 +1,153 @@
+/* 전역 스타일 리셋 및 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 전문적인 인디고 색상 팔레트 */
+  --primary-color: #4338CA;
+  --primary-hover: #4F46E5;
+  --primary-light: #6366F1;
+  --secondary-color: #10B981;
+  --accent-color: #F59E0B;
+  --success-color: #10B981;
+  --error-color: #EF4444;
+  --warning-color: #F59E0B;
+  
+  /* 전문적인 그라데이션 */
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #4338CA 100%);
+  --gradient-secondary: linear-gradient(135deg, #818CF8 0%, #4338CA 100%);
+  --gradient-success: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+  --gradient-hero: linear-gradient(135deg, #6366F1 0%, #4338CA 50%, #3730A3 100%);
+  --gradient-card: linear-gradient(135deg, rgba(67, 56, 202, 0.1) 0%, rgba(55, 48, 163, 0.1) 100%);
+  
+  /* 그림자 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* 배경 */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-tertiary: #F1F5F9;
+  
+  /* 텍스트 */
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-tertiary: #94A3B8;
+  
+  /* 그래프 노드 색상 (균형잡힌 색상, 과도한 강조 방지) */
+  --graph-node-class: #6366F1;
+  --graph-node-class-hover: #7C3AED;
+  --graph-node-dataset: #10B981;
+  --graph-node-dataset-hover: #059669;
+  --graph-node-default: #94A3B8;
+  --graph-node-default-hover: #CBD5E1;
+  
+  /* 그래프 엣지 색상 (균형잡힌 색상) */
+  --graph-edge-isDataOf: #6366F1;
+  --graph-edge-hasPart: #10B981;
+  --graph-edge-relatedTo: #F59E0B;
+  --graph-edge-dependsOn: #EF4444;
+  --graph-edge-default: #CBD5E1;
+  
+  /* 그래프 스타일 */
+  --graph-bg: #FFFFFF;
+  --graph-border: rgba(0, 0, 0, 0.08);
+  --graph-legend-bg: #F8FAFC;
+  --graph-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 코드 블록 스타일 */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--bg-tertiary);
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 모던한 카드 스타일 */
+.modern-card {
+  background: var(--bg-primary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modern-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out;
+}

@@ -3,7 +3,7 @@
 규칙 기반 + 시맨틱 매핑을 조합한 통합 매핑 전략
 """
 
-import pandas as pd
+import polars as pl
 from typing import List
 
 from backend.services.ontology_services.config import HIGH_CONFIDENCE, MEDIUM_CONFIDENCE, LOW_CONFIDENCE
@@ -47,8 +47,15 @@ class HybridMapper:
         
         # Step 2: 시맨틱 매칭
         semantic_df = self.semantic_mapper.map_semantic([filename], self.ontology_classes)
-        semantic_score = semantic_df.iloc[0]['Confidence']
-        semantic_class = semantic_df.iloc[0]['Mapped_Class']
+        semantic_rows = semantic_df.to_dicts()
+        if semantic_rows:
+            semantic_score = semantic_rows[0]['Confidence']
+            semantic_class = semantic_rows[0]['Mapped_Class']
+            interpreted_as = semantic_rows[0]['Interpreted_As']
+        else:
+            semantic_score = 0.0
+            semantic_class = "Unclassified"
+            interpreted_as = filename
         
         if semantic_score >= self.MEDIUM_CONFIDENCE:
             return MappingResult(
@@ -56,7 +63,7 @@ class HybridMapper:
                 mapped_class=semantic_class,
                 confidence=semantic_score,
                 method="semantic",
-                interpreted_as=semantic_df.iloc[0]['Interpreted_As']
+                interpreted_as=interpreted_as
             )
         
         # Step 3: 모든 방법 실패 시 Unclassified
@@ -68,7 +75,7 @@ class HybridMapper:
             interpreted_as=self.rule_mapper.preprocess_filename(filename)
         )
     
-    def map_files(self, filenames: List[str]) -> pd.DataFrame:
+    def map_files(self, filenames: List[str]) -> pl.DataFrame:
         """
         여러 파일 일괄 매핑
         
@@ -88,5 +95,5 @@ class HybridMapper:
                 "Method": result.method
             })
         
-        return pd.DataFrame(results)
+        return pl.DataFrame(results)
 

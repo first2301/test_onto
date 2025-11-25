@@ -1,0 +1,98 @@
+/* App 컴포넌트 전용 스타일 */
+/* Ant Design을 사용하므로 최소한의 커스텀 스타일만 유지 */
+
+/* Ant Design 컴포넌트 커스터마이징 */
+.ant-card {
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.ant-card:hover {
+  box-shadow: var(--shadow-xl) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.ant-btn-primary {
+  background: var(--gradient-primary) !important;
+  border: none !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.ant-btn-primary:hover {
+  background: var(--gradient-primary) !important;
+  box-shadow: var(--shadow-lg) !important;
+  transform: translateY(-2px) !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.2) !important;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: var(--primary-color) !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.2) !important;
+}
+
+.ant-table-thead > tr > th {
+  background: var(--bg-tertiary) !important;
+  font-weight: 600 !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: var(--gradient-card) !important;
+}
+
+.ant-tag {
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+}
+
+/* 메뉴 활성 상태 색상 커스터마이징 */
+.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-dark .ant-menu-item-selected > a,
+.ant-menu-dark .ant-menu-item-selected > span > a {
+  background-color: rgba(67, 56, 202, 0.25) !important;
+  color: #FFFFFF !important;
+  border-bottom: 2px solid #6366F1 !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background-color: rgba(67, 56, 202, 0.2) !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected::after {
+  border-bottom-color: #6366F1 !important;
+}
+
+/* 전역 유틸리티 클래스 */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modern-button {
+  background: var(--gradient-primary);
+  border: none;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-button:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}

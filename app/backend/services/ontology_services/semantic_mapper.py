@@ -3,7 +3,7 @@
 임베딩 기반 시맨틱 유사도 매핑 전략
 """
 
-import pandas as pd
+import polars as pl
 from sentence_transformers import SentenceTransformer, util
 from typing import List
 
@@ -19,11 +19,11 @@ class SemanticMapper:
         name = fname.replace('.csv', '').replace('_', ' ').replace('-', ' ')
         return name.strip()
     
-    def map_semantic(self, files: List[str], classes: List[str]) -> pd.DataFrame:
+    def map_semantic(self, files: List[str], classes: List[str]) -> pl.DataFrame:
         """시맨틱 매핑 수행"""
         clean_names = [self.preprocess_filename(f) for f in files]
-        embeddings_files = self.model.encode(clean_names)
-        embeddings_classes = self.model.encode(classes)
+        embeddings_files = self.model.encode(clean_names, show_progress_bar=False)
+        embeddings_classes = self.model.encode(classes, show_progress_bar=False)
         
         scores = util.cos_sim(embeddings_files, embeddings_classes)
         
@@ -40,5 +40,5 @@ class SemanticMapper:
                 "Confidence": round(best_score, 3)
             })
         
-        return pd.DataFrame(results)
+        return pl.DataFrame(results)
 
